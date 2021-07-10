@@ -23,9 +23,9 @@ env:
   REPO_URL: https://github.com/openwrt/openwrt
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: openwrt/k3/stable.config
-  DIY_P1_SH: openwrt/k3/stablegit.sh
-  DIY_P2_SH: openwrt/k3/stablemod.sh
+  CONFIG_FILE: k3/stable.config
+  DIY_P1_SH: k3/stablegit.sh
+  DIY_P2_SH: k3/stablemod.sh
   UPLOAD_BIN_DIR: true
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: false
