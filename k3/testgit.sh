@@ -17,6 +17,9 @@
 #sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
 ############################
 
+# Add upx
+svn co https://github.com/Lienol/openwrt/trunk/main/tools/upx tools/upx
+
 # Replace k3screenctrl
 #rm -rf package/lean/k3screenctrl
 git clone https://github.com/lwz322/k3screenctrl_build.git package/lwz322/k3screenctrl
