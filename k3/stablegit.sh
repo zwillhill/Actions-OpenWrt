@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Lean K3 Stable Git.sh
+# OpenWrt K3 Stable Git.sh
 #
 
 # https://github.com/P3TERX/Actions-OpenWrt
