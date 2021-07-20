@@ -34,5 +34,5 @@ git clone https://github.com/jerrykuku/luci-app-vssr.git package/jerrykuku/luci-
 # Add some depends
 git clone https://github.com/xiaorouji/openwrt-passwall package/xiaorouji/openwrt-passwall
 svn co https://github.com/coolsnowwolf/lede/trunk/tools/upx tools/upx
-svn co https://github.com/coolsnowwolf/lede/trunk/tools/ucl tools/ucl
+#svn co https://github.com/coolsnowwolf/lede/trunk/tools/ucl tools/ucl
 #============================================================
