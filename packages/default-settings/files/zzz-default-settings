@@ -61,7 +61,22 @@ rm -rf /usr/lib/lua/luci/view/admin_status/index
 /etc/init.d/softethervpnclient disable 2>/dev/null
 /etc/init.d/haproxy disable 2>/dev/null
 /etc/init.d/kcptun disable 2>/dev/null
-
+#============================================================
+#修改路由密码
+sed -i 's/root::0:0:99999:7:::/root:$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF.:0:0:99999:7:::/g' /etc/shadow
+#设置IP
+uci set network.lan.ipaddr='192.168.7.1'
+uci commit network
+#修改WiFi
+uci set wireless.@wifi-iface[0].encryption='psk2'
+uci set wireless.@wifi-iface[0].key='73555071'
+uci set wireless.@wifi-iface[1].encryption='psk2'
+uci set wireless.@wifi-iface[1].key='73555071'
+uci commit wireless
+#禁用dhcpIPv6
+uci set dhcp.@dnsmasq[0].filter_aaaa=1
+uci commit dhcp\n
+#============================================================
 rm -rf /tmp/luci-*cache
 
 exit 0
