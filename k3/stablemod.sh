@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# OpenWrt K3 test Mod.sh
+# OpenWrt K3 stable Mod.sh
 #
 
 # https://github.com/P3TERX/Actions-OpenWrt
