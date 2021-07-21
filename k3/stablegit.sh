@@ -15,6 +15,9 @@
 #echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
 #echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
 #============================================================
+# use luci 19.07
+sed -i 's/luci.git/luci.git;openwrt-19.07/' feeds.conf.default
+#============================================================
 # use dnsmasq-full & add luci
 sed -i 's|dnsmasq \\|dnsmasq-full \\|' include/target.mk
 sed -i '/odhcp6c/i\\tluci \\' include/target.mk
