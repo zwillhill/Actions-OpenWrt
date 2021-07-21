@@ -19,6 +19,18 @@
 sed -i 's|dnsmasq \\|dnsmasq-full \\|' include/target.mk
 sed -i '/odhcp6c/i\\tluci \\' include/target.mk
 #============================================================
+#修改校时服务器
+sed -i 's/0.openwrt.pool.ntp.org/ntp.aliyun.com/' package/base-files/files/bin/config_generate
+sed -i 's/1.openwrt.pool.ntp.org/time1.cloud.tencent.com/' package/base-files/files/bin/config_generate
+sed -i 's/2.openwrt.pool.ntp.org/time.ustc.edu.cn/' package/base-files/files/bin/config_generate
+sed -i 's/3.openwrt.pool.ntp.org/cn.pool.ntp.org/' package/base-files/files/bin/config_generate
+#修改banner
+sed -i '1,5d' package/base-files/files/etc/banner
+sed -i '1i\  _______                     ________        __'  package/base-files/files/etc/banner
+sed -i '2i\ |   |   |.---.-.-----.-----.|  |  |  |.----.|  |_ '  package/base-files/files/etc/banner
+sed -i '3i\ |       ||  _  |     |-- __||  |  |  ||   _||   _|'  package/base-files/files/etc/banner
+sed -i '4i\ |___|___||___._|__|__|_____||________||__|  |____|'  package/base-files/files/etc/banner
+#============================================================
 # Add default-settings
 svn co https://github.com/zwillhill/actions-openwrt/trunk/packages/default-settings package/zwillhill/default-settings
 #============================================================
