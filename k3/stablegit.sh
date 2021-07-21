@@ -15,8 +15,9 @@
 #echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
 #echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
 #============================================================
-# use dnsmasq-full instead of dnsmasq
-sed -i 's|dnsmasq|dnsmasq-full|' include/target.mk
+# use dnsmasq-full & add luci
+sed -i 's|dnsmasq \\|dnsmasq-full \\|' include/target.mk
+sed -i '/odhcp6c/i\\tluci \\' include/target.mk
 #============================================================
 # Add default-settings
 svn co https://github.com/zwillhill/actions-openwrt/trunk/packages/default-settings package/zwillhill/default-settings
