@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Build OpenWrt K3 Stable
+name: Build OpenWrt 19.07 K3 Stable
 
 on:
   repository_dispatch:
