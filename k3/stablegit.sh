@@ -24,7 +24,7 @@ sed -i 's|^TARGET_|#TARGET_|g; s|#TARGET_DEVICES += phicomm|TARGET_DEVICES += ph
 # use dnsmasq-full & add luci
 #sed -i 's|dnsmasq \\|dnsmasq-full \\|' include/target.mk
 #sed -i '/odhcp6c/i\\tluci \\' include/target.mk
-sed -i 's|dnsmasq iptables|default-settings dnsmasq-full luci luci-compat iptables|' include/target.mk
+sed -i 's|dnsmasq iptables|collectd-mod-thermal default-settings dnsmasq-full luci luci-compat iptables|' include/target.mk
 #============================================================
 #修改校时服务器
 sed -i 's/0.openwrt.pool.ntp.org/ntp.aliyun.com/' package/base-files/files/bin/config_generate
