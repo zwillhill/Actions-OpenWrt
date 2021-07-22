@@ -15,6 +15,9 @@
 #echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
 #echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
 #============================================================
+# Only compile K3
+sed -i 's|^TARGET_|#TARGET_|g; s|#TARGET_DEVICES += phicomm_k3|TARGET_DEVICES += phicomm_k3|' target/linux/bcm53xx/image/Makefile
+#============================================================
 # use luci 19.07
 #sed -i 's/luci.git/luci.git;openwrt-19.07/' feeds.conf.default
 #============================================================
