@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Build OpenWrt K3 Test
+name: Build OpenWrt-master K3 Test
 
 on:
   repository_dispatch:
